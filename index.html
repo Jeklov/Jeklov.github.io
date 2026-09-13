@@ -8,59 +8,71 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    font-size: 10pt;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.6;
     color: #e2e8f0;
     background: #0f172a;
-    max-width: 100%;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Контейнер с отступами */
+  .container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .header {
     display: flex;
     gap: 18px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     border-bottom: 2.5px solid #3b82f6;
-    padding-bottom: 14px;
+    padding-bottom: 16px;
   }
   .header-info { flex: 1; }
   .header h1 {
-    font-size: 22pt;
+    font-size: 40px;
     font-weight: 700;
     color: #f1f5f9;
     letter-spacing: -0.5px;
   }
   .header .title {
-    font-size: 11pt;
+    font-size: 21px;
     color: #60a5fa;
     font-weight: 600;
-    margin-top: 2px;
+    margin-top: 4px;
   }
   .contacts {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 16px;
-    margin-top: 8px;
-    font-size: 9pt;
+    gap: 10px 20px;
+    margin-top: 10px;
+    font-size: 18px;
     color: #94a3b8;
   }
   .contacts span { white-space: normal; max-width: 100%; }
   .contacts a { color: #60a5fa; text-decoration: none; }
 
-  section { margin-bottom: 14px; }
+  section { margin-bottom: 20px; }
   section h2 {
-    font-size: 11pt;
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #60a5fa;
-    margin-bottom: 8px;
-    padding-bottom: 3px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
     border-bottom: 1px solid #334155;
   }
 
-  .entry { margin-bottom: 10px; }
+  .entry { margin-bottom: 14px; }
   .entry-header {
     display: flex;
     justify-content: space-between;
@@ -68,28 +80,75 @@
     flex-wrap: wrap;
     gap: 4px;
   }
-  .entry-title { font-weight: 600; font-size: 10.5pt; color: #f1f5f9; }
-  .entry-date { font-size: 9pt; color: #64748b; white-space: nowrap; }
-  .entry-subtitle { font-size: 9.5pt; color: #94a3b8; font-style: italic; }
-  .entry ul { margin: 4px 0 0 16px; font-size: 9.5pt; color: #cbd5e1; }
-  .entry li { margin-bottom: 2px; }
+  .entry-title { font-weight: 600; font-size: 21px; color: #f1f5f9; }
+  .entry-date { font-size: 18px; color: #64748b; white-space: nowrap; }
+  .entry-subtitle { font-size: 18px; color: #94a3b8; font-style: italic; }
+  .entry ul { margin: 6px 0 0 18px; font-size: 20px; color: #cbd5e1; }
+  .entry li { margin-bottom: 3px; }
 
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px 24px;
+    gap: 8px 24px;
   }
-  .skill-category { font-size: 9.5pt; }
+  .skill-category { font-size: 20px; }
   .skill-category strong { color: #e2e8f0; }
   .skill-category span { color: #94a3b8; }
 
-  .summary { font-size: 9.5pt; color: #cbd5e1; line-height: 1.6; }
-  .courses-list { font-size: 9.5pt; color: #cbd5e1; margin-top: 4px; line-height: 1.7; }
+  .summary { font-size: 20px; color: #cbd5e1; line-height: 1.7; }
+  .courses-list { font-size: 20px; color: #cbd5e1; margin-top: 6px; line-height: 1.7; }
   .courses-list strong { color: #e2e8f0; }
+
+  /* Кнопка GitHub */
+  .github-btn {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 2px solid #334155;
+  }
+  .github-btn a {
+    display: inline-block;
+    padding: 14px 48px;
+    background: #3b82f6;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  /* PDF-специфичные стили */
+  @media print {
+    body {
+      font-size: 10pt;
+      min-height: auto;
+      display: block;
+    }
+    .container {
+      max-width: 100%;
+      padding: 0;
+      display: block;
+    }
+    .header h1 { font-size: 22pt; }
+    .header .title { font-size: 11pt; }
+    .contacts { font-size: 9pt; }
+    section h2 { font-size: 11pt; }
+    .entry-title { font-size: 10.5pt; }
+    .entry-date { font-size: 9pt; }
+    .entry-subtitle { font-size: 9.5pt; }
+    .entry ul { font-size: 9.5pt; }
+    .skills-grid { gap: 6px 24px; }
+    .skill-category { font-size: 9.5pt; }
+    .summary { font-size: 9.5pt; }
+    .courses-list { font-size: 9.5pt; }
+    .github-btn a { font-size: 13pt; }
+  }
 </style>
 </head>
 <body>
 
+  <div class="container">
   <div class="header">
     <div class="header-info">
       <h1>Щеглов Евгений Александрович</h1>
@@ -198,20 +257,12 @@
     </div>
   </section>
 
-  <div style="text-align: center; margin-top: 24px; padding-top: 16px; border-top: 2px solid #334155;">
-    <a href="https://github.com/Jeklov" style="
-      display: inline-block;
-      padding: 14px 48px;
-      background: #3b82f6;
-      color: #fff;
-      font-size: 13pt;
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: 8px;
-      letter-spacing: 0.5px;
-    ">
+  <div class="github-btn">
+    <a href="https://github.com/Jeklov">
       <svg height="18" width="18" viewBox="0 0 16 16" fill="#fff" style="vertical-align:middle;position:relative;top:-2px;margin-right:6px"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>&nbsp; GitHub — github.com/Jeklov
     </a>
+  </div>
+
   </div>
 
 </body>
