@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Щеглов Евгений — Fullstack Developer</title>
+<style>
+  @page { size: A4; margin: 15mm 18mm; background: #0f172a; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #e2e8f0;
+    background: #0f172a;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .header {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 16px;
+    border-bottom: 2.5px solid #3b82f6;
+    padding-bottom: 14px;
+  }
+  .header-info { flex: 1; }
+  .header h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #f1f5f9;
+    letter-spacing: -0.5px;
+  }
+  .header .title {
+    font-size: 11pt;
+    color: #60a5fa;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 8px;
+    font-size: 9pt;
+    color: #94a3b8;
+  }
+  .contacts span { white-space: normal; max-width: 100%; }
+  .contacts a { color: #60a5fa; text-decoration: none; }
+
+  section { margin-bottom: 14px; }
+  section h2 {
+    font-size: 11pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #60a5fa;
+    margin-bottom: 8px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #334155;
+  }
+
+  .entry { margin-bottom: 10px; }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .entry-title { font-weight: 600; font-size: 10.5pt; color: #f1f5f9; }
+  .entry-date { font-size: 9pt; color: #64748b; white-space: nowrap; }
+  .entry-subtitle { font-size: 9.5pt; color: #94a3b8; font-style: italic; }
+  .entry ul { margin: 4px 0 0 16px; font-size: 9.5pt; color: #cbd5e1; }
+  .entry li { margin-bottom: 2px; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+  }
+  .skill-category { font-size: 9.5pt; }
+  .skill-category strong { color: #e2e8f0; }
+  .skill-category span { color: #94a3b8; }
+
+  .summary { font-size: 9.5pt; color: #cbd5e1; line-height: 1.6; }
+  .courses-list { font-size: 9.5pt; color: #cbd5e1; margin-top: 4px; line-height: 1.7; }
+  .courses-list strong { color: #e2e8f0; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-info">
+      <h1>Щеглов Евгений Александрович</h1>
+      <div class="title">Fullstack Developer · Kotlin · Python</div>
+      <div class="contacts">
+        <span>📧 <a href="mailto:e.shcheglov@edu.centraluniversity.ru">e.shcheglov@edu.centraluniversity.ru</a></span>
+        <span><svg height="14" width="14" viewBox="0 0 16 16" fill="#60a5fa" style="vertical-align:middle;position:relative;top:-1px"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg> <a href="https://github.com/Jeklov">github.com/Jeklov</a></span>
+        <span>📍 Москва, Россия</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>О себе</h2>
+    <p class="summary">
+      Разработчик с опытом в мобильной и серверной разработке. Пишу на Kotlin и Python, работаю с API и базами данных.
+      Участвовал в хакатонах, работал в стартапе над приложением Svazi.
+      Интересуюсь финтехом, интеграционными системами и автоматизацией бизнес-процессов.
+      Готов быстро обучаться и брать на себя новые задачи.
+    </p>
+  </section>
+
+  <section>
+    <h2>Опыт</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Svazi — Mobile Developer</span>
+        <span class="entry-date">2025 — настоящее время</span>
+      </div>
+      <ul>
+        <li>Разработка мобильного приложения на Kotlin/Compose: UI-компоненты, навигация, интеграция с REST API</li>
+        <li>Работа в команде по Agile: code review, планирование спринтов, деплой на staging/production</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Хакатоны — Android / Fullstack Developer</span>
+        <span class="entry-date">2024 — настоящее время</span>
+      </div>
+      <ul>
+        <li>Участие в нескольких хакатонах в роли разработчика: rapid prototyping, API-интеграции, работа в команде под жёсткие дедлайны</li>
+        <li>Разработка клиент-серверных решений: мобильный фронтенд + бэкенд-сервисы, REST API</li>
+        <li>Опыт работы с внешними API, обработка данных, интеграция платёжных и аналитических сервисов</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Kotlin Multiplatform — Cross-platform Development</span>
+        <span class="entry-date">2025 — настоящее время</span>
+      </div>
+      <ul>
+        <li>Тестовые проекты на KMP: общий слой бизнес-логики для Android, iOS, Windows, Linux, веб и бэкенд модулей</li>
+        <li>Разделение shared-модуля: сетевой слой, модели данных, репозитории</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Pet-проекты и веб-разработка</span>
+        <span class="entry-date">2024 — настоящее время</span>
+      </div>
+      <ul>
+        <li>Сервисные приложения на FastAPI: REST API, аутентификация, работа с БД, тестирование</li>
+        <li>Вёрстка веб-страниц: HTML/CSS/JS, адаптивный дизайн</li>
+        <li>Изучение и применение паттернов проектирования, архитектуры MVVM/MVI, чистая архитектура</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Образование</h2>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Центральный университет (Central University)</span>
+        <span class="entry-date">2025 — 2029</span>
+      </div>
+      <div class="entry-subtitle">Бакалавриат, 2 курс</div>
+      <div class="courses-list">
+        <strong>Изучаемые курсы:</strong> Базы данных, Фронтенд-разработка, Архитектура приложений, Введение в экономику, Дискретная математика, Теория вероятностей
+        <br>
+        <strong>Завершённые курсы:</strong> Алгоритмы и структуры данных, Математический анализ, Линейная алгебра, Статистика, Компьютерная студия, Agile, Бизнес и аналитика, Python, Kotlin, Golang, C++, Основы промышленной разработки
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Навыки</h2>
+    <div class="skills-grid">
+      <div class="skill-category"><strong>Языки:</strong> <span>Kotlin, Python, Go, C++, JavaScript, SQL</span></div>
+      <div class="skill-category"><strong>Бэкенд:</strong> <span>FastAPI, REST API, PostgreSQL</span></div>
+      <div class="skill-category"><strong>Мобильная разработка:</strong> <span>Kotlin, Jetpack Compose, Kotlin Multiplatform, Coroutines, Flow</span></div>
+      <div class="skill-category"><strong>Linux & DevOps:</strong> <span>Linux administration, Bash scripting, Docker, hosting, deployment</span></div>
+      <div class="skill-category"><strong>Инструменты:</strong> <span>Git, IntelliJ IDEA, VS Code, Neovim</span></div>
+      <div class="skill-category"><strong>Архитектура:</strong> <span>MVVM, MVI, Clean Architecture, layered architecture</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Языки</h2>
+    <div class="skills-grid">
+      <div class="skill-category"><strong>Русский:</strong> <span>Родной</span></div>
+      <div class="skill-category"><strong>Английский:</strong> <span>B2 (Upper Intermediate)</span></div>
+    </div>
+  </section>
+
+  <div style="text-align: center; margin-top: 24px; padding-top: 16px; border-top: 2px solid #334155;">
+    <a href="https://github.com/Jeklov" style="
+      display: inline-block;
+      padding: 14px 48px;
+      background: #3b82f6;
+      color: #fff;
+      font-size: 13pt;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+    ">
+      <svg height="18" width="18" viewBox="0 0 16 16" fill="#fff" style="vertical-align:middle;position:relative;top:-2px;margin-right:6px"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>&nbsp; GitHub — github.com/Jeklov
+    </a>
+  </div>
+
+</body>
+</html>
